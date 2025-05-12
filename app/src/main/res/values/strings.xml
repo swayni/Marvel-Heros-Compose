@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Marvel Heroes</string>
+
+
+    <string name="back">Back</string>
+    <string name="home">Home</string>
+    <string name="list">List</string>
+    <string name="character_image">Character Image</string>
+    <string name="marvel_characters">Marvel Characters</string>
+    <string name="comics">Comics</string>
+    <string name="description">DESCRIPTION</string>
+    <string name="detail">Detail</string>
+    <string name="favorite">Favorite</string>
+    <string name="loading">Loading…</string>
+</resources>
