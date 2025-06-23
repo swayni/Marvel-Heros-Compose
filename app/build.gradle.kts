@@ -70,11 +70,17 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.material)
     implementation(libs.androidx.ui.tooling.preview.android)
+
+    //test
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    implementation(libs.material)
+    testImplementation(libs.kotlinx.coroutines.test)
+    testImplementation(libs.mockito)
+    testImplementation(libs.turbine)
+    testImplementation(kotlin("test"))
 
+    implementation(libs.material)
 
     implementation(libs.androidx.activity.compose)
     implementation(libs.compose.material3)
