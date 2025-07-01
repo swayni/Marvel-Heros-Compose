@@ -22,6 +22,7 @@ realm-kotlin = "1.16.0"
 mockito-kotlin= "5.2.1"
 kotlinx-coroutines-test = "1.7.3"
 turbine = "1.0.0"
+uiTestJunit4 = "1.8.3"
 
 [libraries]
 androidx-activity-compose = { group = "androidx.activity", name="activity-compose", version.ref = "activityCompose" }
@@ -57,6 +58,9 @@ realm-kotlin-library-base = {module = "io.realm.kotlin:library-base", version.re
 mockito = { module = "org.mockito.kotlin:mockito-kotlin", version.ref = "mockito-kotlin" }
 turbine = { module = "app.cash.turbine:turbine", version.ref = "turbine" }
 kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinx-coroutines-test" }
+
+ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4", version.ref = "uiTestJunit4" }
+ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest", version.ref = "uiTestJunit4" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

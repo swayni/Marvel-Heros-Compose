@@ -43,7 +43,7 @@ fun FavoriteListScreen(
     Scaffold(
         modifier = Modifier.nestedScroll(scrollBehavior.nestedScrollConnection),
         topBar = {
-            CollapsingToolbar(scrollBehavior)
+            CollapsingToolbar(scrollBehavior, scrollBehavior.state.collapsedFraction > 0.25f)
         }
     ) { innerPadding ->
 

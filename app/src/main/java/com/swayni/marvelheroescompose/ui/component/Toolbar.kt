@@ -13,11 +13,13 @@ import androidx.compose.material3.LargeTopAppBar
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBarColors
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.material3.TopAppBarScrollBehavior
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -28,12 +30,15 @@ import com.swayni.marvelheroescompose.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun CollapsingToolbar(scrollBehavior: TopAppBarScrollBehavior) {
+fun CollapsingToolbar(
+    scrollBehavior: TopAppBarScrollBehavior = TopAppBarDefaults.enterAlwaysScrollBehavior(),
+    showTitle: Boolean
+) {
     Box(
         modifier = Modifier
             .fillMaxWidth()
             .height(200.dp + (scrollBehavior.state.heightOffset * 4).dp)
-            .background(colorResource(R.color.gray_custom_1)),
+            .background(colorResource(R.color.gray_custom_1)).testTag("LogoBox"),
         contentAlignment = Alignment.Center
     ) {
         Image(
@@ -48,13 +53,13 @@ fun CollapsingToolbar(scrollBehavior: TopAppBarScrollBehavior) {
 
     LargeTopAppBar(
         title = {
-            if (scrollBehavior.state.collapsedFraction > 0.25f){
+            if (showTitle){
                 Text(
                     text = stringResource(R.string.marvel_characters),
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis,
                     style = MaterialTheme.typography.headlineSmall,
-                    modifier = Modifier.fillMaxWidth(),
+                    modifier = Modifier.fillMaxWidth().testTag("CollapsedTitle"),
                     textAlign = TextAlign.Center
                 )
             }

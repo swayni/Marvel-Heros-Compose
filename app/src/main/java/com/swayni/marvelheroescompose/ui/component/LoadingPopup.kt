@@ -19,6 +19,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.StrokeCap
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontStyle
@@ -30,11 +31,11 @@ import com.swayni.marvelheroescompose.R
 @Composable
 fun LoadingPopup(){
     Box(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier.fillMaxSize().testTag("LoadingPopupBox"),
         contentAlignment = Alignment.Center
     ) {
         Card(
-            modifier = Modifier.width(250.dp).wrapContentHeight(),
+            modifier = Modifier.width(250.dp).wrapContentHeight().testTag("LoadingPopupCard"),
             shape = RoundedCornerShape(20.dp),
             colors = CardColors(
                 containerColor = colorResource(R.color.red),
@@ -46,11 +47,11 @@ fun LoadingPopup(){
         ){
             Column (modifier = Modifier.fillMaxWidth().wrapContentHeight().padding(top = 20.dp, bottom = 30.dp), horizontalAlignment = Alignment.CenterHorizontally){
                 Row (modifier = Modifier.padding(bottom = 10.dp)) {
-                    Text(text = stringResource(R.string.loading), fontSize = 18.sp, fontStyle = FontStyle.Italic, fontWeight = FontWeight.SemiBold, color = colorResource(R.color.gray_custom_1))
+                    Text(text = stringResource(R.string.loading), fontSize = 18.sp, fontStyle = FontStyle.Italic, fontWeight = FontWeight.SemiBold, color = colorResource(R.color.gray_custom_1), modifier = Modifier.testTag("LoadingText"))
                 }
                 Row (){
                     CircularProgressIndicator(
-                        modifier = Modifier.wrapContentSize(),
+                        modifier = Modifier.wrapContentSize().testTag("LoadingProgress"),
                         color = colorResource(R.color.gray_custom_1),
                         strokeWidth = 5.dp,
                         trackColor = colorResource(R.color.gray_custom_2),

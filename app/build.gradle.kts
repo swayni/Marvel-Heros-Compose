@@ -79,6 +79,8 @@ dependencies {
     testImplementation(libs.mockito)
     testImplementation(libs.turbine)
     testImplementation(kotlin("test"))
+    androidTestImplementation(libs.ui.test.junit4)
+    debugImplementation(libs.ui.test.manifest)
 
     implementation(libs.material)
 
