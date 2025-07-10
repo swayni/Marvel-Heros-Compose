@@ -2,7 +2,7 @@
 
 ###
 
-<p align="left">1- Kotlin, Compose, Kotlin Gradle<br>2- MVVM mimarisi<br>3- Repository, Usecase<br>4- Dagger-hilt, Retrofit, Realm, Navigation, Flow, Coroutine</p>
+<p align="left">1- Kotlin, Compose, Kotlin Gradle<br>2- MVVM mimarisi<br>3- Repository, Usecase<br>4- Dagger-hilt, Retrofit, Realm, Navigation, Flow, Coroutine<br>5-Unit test and unit ui test</p>
 
 ###
 
